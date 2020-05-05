@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/conc_eq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/concentration_equation"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/init_conc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/init_conc"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/init_vol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/init_vol"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/fin_conc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/fin_conc"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/fin_vol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/fin_vol"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/conc_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/conc_btn"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/hw_eq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hw_eq"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/p"
+                android:inputType="numberDecimal"
+                android:textSize="15sp"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/q"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/q"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/hw_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

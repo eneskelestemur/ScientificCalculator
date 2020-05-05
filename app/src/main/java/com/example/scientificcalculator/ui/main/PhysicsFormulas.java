@@ -12,18 +12,17 @@ public class PhysicsFormulas {
      * @param a - acceleration of the object in m/s^2.
      */
     public Double motionEq(Double capF, Double m, Double a) {
-        if (capF == null) {
+        if (capF == 0 && m != 0 && a != 0) {
             capF = m * a;
             return capF;
-        } else if (m == null) {
+        } else if (m == 0 && capF != 0 && a != 0) {
             m = capF / a;
             return m;
-        } else if (a == null) {
+        } else if (a == 0 && capF != 0 && m != 0) {
             a = capF / m;
             return a;
-        } else {
-            throw new IllegalArgumentException();
         }
+        return 0.0;
     }
     /*
      * Newton's Law of gravitation equation.
@@ -36,21 +35,20 @@ public class PhysicsFormulas {
      */
     public Double gravitationEq(Double capF, Double firstMass, Double secondMass, Double r) {
         Double capG = 6.67 * Math.pow(10, -11);
-        if (capF == null) {
+        if (capF == 0 && firstMass != 0 && secondMass != 0 && r != 0) {
             capF = (capG * firstMass * secondMass) / Math.pow(r, 2);
             return capF;
-        } else if (firstMass == null) {
+        } else if (firstMass == 0 && capF != 0 && secondMass != 0 && r != 0) {
             firstMass = (capF * Math.pow(r, 2)) / (capG * secondMass);
             return firstMass;
-        } else if (secondMass == null) {
+        } else if (secondMass == 0 && capF != 0 && firstMass != 0 && r != 0) {
             secondMass = (capF * Math.pow(r, 2)) / (capG * firstMass);
             return secondMass;
-        } else if (r == null) {
+        } else if (r == 0 && capF != 0 && firstMass != 0 && secondMass != 0) {
             r = Math.sqrt((capG * firstMass * secondMass) / capF);
             return r;
-        } else {
-            throw new IllegalArgumentException();
         }
+        return 0.0;
     }
     /*
      * The following methods contain the common dynamics equations.

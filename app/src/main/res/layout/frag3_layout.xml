@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/motion_eq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/motion_equation"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/force"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/f_force_n"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/m_mass_of_object_kg"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/acceleration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/a_acceleration_of_object_m_s2"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/motion_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_den"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/grav_eq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gravitation_equation"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/grav_force"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/f_force_between_objects_n"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/first_mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/first_mass_kg"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/second_mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/second_mass_kg"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/r_radius_of_distance_between_masses_m"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/grav_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_den"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

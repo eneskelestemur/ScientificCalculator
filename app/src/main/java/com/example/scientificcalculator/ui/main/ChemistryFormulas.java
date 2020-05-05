@@ -17,21 +17,20 @@ public class ChemistryFormulas {
      */
     public Double idealGasEq(Double capP, Double capV, Double n, Double capT) {
         final double capR = 0.08206;
-        if (capP == null) {
+        if (capP == 0 && capV != 0 && n != 0 && capT != 0) {
             capP = (n * capR * capT) / capV;
             return capP;
-        } else if (capV == null) {
+        } else if (capV == 0 && capP != 0 && n != 0 && capT != 0) {
             capV = (n * capR * capT) / capP;
             return capV;
-        } else if (n == null) {
+        } else if (n == 0 && capP != 0 && capV != 0 && capT != 0) {
             n = (capP * capV) / (capR * capT);
             return n;
-        } else if (capT == null) {
+        } else if (capT == 0 && capP != 0 && capV != 0 && n != 0) {
             capT = (capP * capV) / (capR * n);
             return capT;
-        } else {
-            throw new IllegalArgumentException();
         }
+        return 0.0;
     }
     /*
      * Density equation.
@@ -41,18 +40,17 @@ public class ChemistryFormulas {
      * @param capV - capital V, volume in cm3
      */
     public Double densityEq(Double d, Double m, Double capV) {
-        if (d == null) {
+        if (d == 0 && m != 0 && capV != 0) {
             d = m / capV;
             return d;
-        } else if (m == null) {
+        } else if (m == 0 && d != 0 && capV != 0) {
             m = d * capV;
             return m;
-        } else if (capV == null) {
+        } else if (capV == 0 && d != 0 && m != 0) {
             capV = m / d;
             return capV;
-        } else {
-            throw new IllegalArgumentException();
         }
+        return 0.0;
     }
     /*
      * Number of moles equation.

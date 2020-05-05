@@ -13,21 +13,20 @@ public class BiologyFormulas {
      * @param finalV - final volume of the solution in liters
      */
     public Double concetrationEq(Double initialC, Double initialV, Double finalC, Double finalV) {
-        if (initialC == null) {
+        if (initialC == 0 && initialV != 0 && finalC != 0 && finalV != 0) {
             initialC = (finalC * finalV) / initialV;
             return initialC;
-        } else if (initialV == null) {
+        } else if (initialV == 0 && initialC != 0 && finalC != 0 && finalV != 0) {
             initialV = (finalC * finalV) / initialC;
             return initialV;
-        } else if (finalC == null) {
+        } else if (finalC == 0 && initialC != 0 && initialV != 0 && finalV != 0) {
             finalC = (initialC * initialV) / finalV;
             return finalC;
-        } else if (finalV == null) {
+        } else if (finalV == 0 && initialC != 0 && initialV != 0 && finalC != 0) {
             finalV = (initialC * initialV) / finalC;
             return finalV;
-        } else {
-            throw new IllegalArgumentException();
         }
+        return 0.0;
     }
     /*
      * Hardy Weinberg Law.
@@ -36,14 +35,13 @@ public class BiologyFormulas {
      * @param q - frequency of the recessive allele in a population
      */
     public Double hardyWeinbergEq(Double p, Double q) {
-        if (p == null) {
+        if (p == 0 && q >= 0 && q <= 1) {
             p = 1 - q;
             return p;
-        } else if (q == null) {
+        } else if (q == 0 && p >= 0 && p <= 1) {
             q = 1 - p;
             return q;
-        } else {
-            throw new IllegalArgumentException();
         }
+        return 0.0;
     }
 }

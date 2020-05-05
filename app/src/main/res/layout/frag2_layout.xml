@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ig_eq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ig_eq"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/pressure"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/volume_gas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/volume"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/moles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/moles"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/temp_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/temp_k"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/ig_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ig_btn"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/density_eq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/density_eq"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/density"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/den_gcm3"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/mass_g"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/volume_den"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/v_volume_cm3"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/den_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_den"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
